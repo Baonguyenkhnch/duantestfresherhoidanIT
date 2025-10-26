@@ -1,11 +1,11 @@
 import { Outlet, Link } from 'react-router-dom'
 
-export default function AppHeader() {
+export default function Layout() {
   return (
     <div style={{ padding: '20px' }}>
-      <h2>📚 App Header</h2>
+      <h2>🌟 My Layout</h2>
 
-      {/* ✅ Navigation links */}
+      {/* ✅ Thanh điều hướng */}
       <nav style={{ marginBottom: '20px' }}>
         <Link to="/">Home</Link> |{' '}
         <Link to="/book">Book</Link> |{' '}
@@ -16,7 +16,7 @@ export default function AppHeader() {
 
       <hr />
 
-      {/* ✅ Đây là nơi hiện nội dung từng trang */}
+      {/* ✅ Đây là nơi hiển thị nội dung trang con */}
       <Outlet />
     </div>
   )

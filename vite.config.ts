@@ -10,4 +10,12 @@ export default defineConfig({
       },
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // file này chứa biến SCSS toàn cục (nếu bạn có)
+        additionalData: `@import "./src/styles/_variables.scss";`
+      },
+    },
+  },
 })
