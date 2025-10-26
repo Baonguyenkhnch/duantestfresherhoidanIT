@@ -6,11 +6,11 @@ const instance =axios.create({
 });
 instance.interceptors.request.use(
   (config) => {
-    
-    return config
+    if (response & response.data &response.data.data ) {
+        return response.data.data;
+        }    return config
   },
   function (error) {
-  
     return Promise.reject(error)
   }
 )
@@ -21,8 +21,10 @@ instance.interceptors.response.use(
    return response
   },
   function (error) {
+    if (error & error.response & error.response.data){
+          return Promise.reject(error)
+    }
    
-    return Promise.reject(error)
   }
 )
 
